@@ -1,0 +1,5 @@
+def session_test(request):
+    # request.session['h1']='hello'
+    # h1=request.session.get('h1')
+    del request.session['h1']
+    return HttpResponse('ok')
