@@ -1,0 +1,12 @@
+import pymysql
+
+#pymysql.connect("IP地址","用户名","密码","database")
+db = pymysql.connect("10.121.165.111","remoteuser","connect-pd11","skylark")
+cursor = db.cursor()
+# print(cursor)
+cursor.execute("SELECT * FROM skylark.ci_trigger")
+data = cursor.fetchone()
+ 
+print (data)
+ 
+db.close()
